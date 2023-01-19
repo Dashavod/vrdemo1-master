@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ccf581b7285854ba5013b6e485da40, type: 3}
+  m_Name: Mercury
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b5e1197c3a5479f469f68b3654f02911, type: 3}
+  planetName: Mercury
+  position: 1
+  description: Mercury (0.4 AU (60 million km; 37 million mi) from the Sun) is the
+    closest planet to the Sun. The smallest planet in the Solar System (0.055 MEarth),
+    Mercury has no natural satellites. The dominant geological features are impact
+    craters or basins with ejecta blankets, the remains of early volcanic activity
+    including magma flows, and lobed ridges or rupes that were probably produced
+    by a period of contraction early in the planet's history.[89] Mercury's very
+    tenuous atmosphere consists of solar-wind particles trapped by Mercury's magnetic
+    field, as well as atoms blasted off its surface by the solar wind.[90][91] Its
+    relatively large iron core and thin mantle have not yet been adequately explained.
+    Hypotheses include that its outer layers were stripped off by a giant impact,
+    or that it was prevented from fully accreting by the young Sun's energy.[92][93]
+  model: {fileID: 8891787349031603217, guid: 24aa10176473300438a07854cf76d971, type: 3}

@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &105800269793750979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1713628438799555163, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713628438799555163, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713628438799555163, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713628438799555163, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713628438799555163, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153762906455590346, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: witRuntimeConfiguration.witConfiguration
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 147.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572500323434, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342930572984981982, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.324562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56654537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.383303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391723482008931094, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346198393601984259, guid: 96faabd432cebf34396afb11a3636689,
+        type: 3}
+      propertyPath: m_Name
+      value: VoiceBotDemo without witconfig
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96faabd432cebf34396afb11a3636689, type: 3}

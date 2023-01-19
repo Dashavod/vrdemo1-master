@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ccf581b7285854ba5013b6e485da40, type: 3}
+  m_Name: Venus
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 0784305c7c2427e4c8ef09712ae9843c, type: 3}
+  planetName: Venus
+  position: 2
+  description: "Venus (0.7 AU (100 million km; 65 million mi) from the Sun) is close
+    in size to Earth (0.815 MEarth) and, like Earth, has a thick silicate mantle
+    around an iron core, a substantial atmosphere, and evidence of internal geological
+    activity. It is much drier than Earth, and its atmosphere is ninety times as
+    dense. Venus has no natural satellites. It is the hottest planet, with surface
+    temperatures over 400 \xB0C (752 \xB0F), mainly due to the amount of greenhouse
+    gases in the atmosphere.[96] The planet has no magnetic field that would prevent
+    depletion of its substantial atmosphere, which suggests that its atmosphere is
+    being replenished by volcanic eruptions.[97] A relatively young planetary surface
+    displays extensive evidence of volcanic activity, but is devoid of plate tectonics.
+    It may undergo resurfacing episodes on a time scale of 700 million years.[98]"
+  model: {fileID: 4542176569154475755, guid: 9370fee16e6fdc04086f0e99c651c18c, type: 3}
