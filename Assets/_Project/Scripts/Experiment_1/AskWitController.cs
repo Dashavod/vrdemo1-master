@@ -180,11 +180,14 @@ namespace _Project.Scripts.Experiment_1
             public string sender;
             public string message;
             public string type;
-            public Req(string send, string msg, string tp)
+            public string template;
+            public string key = "6Gb9tb29HC";
+            public Req(string send, string msg, string tp, string temp = null )
             {
                 this.sender = send;
                 this.message = msg;
                 this.type = tp;
+                this.template = temp;
             }
         }
         [Serializable]
@@ -223,8 +226,8 @@ namespace _Project.Scripts.Experiment_1
         private IEnumerator WebRequest(string text,string entityValue)
         {
 
-            Req req = new Req("test", text, "rasa");
-            string uri = "https://europe-central2-devtorium-qna.cloudfunctions.net/vrdemo";
+            Req req = new Req(GameManager.sessionId.ToString(), text, "gpt", "cosmoDesc");
+            string uri = "https://europe-central2-devtorium-qna.cloudfunctions.net/aihub";
             var bodyJsonString = JsonUtility.ToJson(req);
             using (UnityWebRequest request = new UnityWebRequest(uri, "POST"))
             {
@@ -241,12 +244,16 @@ namespace _Project.Scripts.Experiment_1
                 }
                 else
                 {
-                    BotResponse[] responses = Newtonsoft.Json.JsonConvert.DeserializeObject<BotResponse[]>(request.downloadHandler.text);
+                    var responses = Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary>(request.downloadHandler.text);
                     Debug.Log($"Form upload complete! {request.downloadHandler.text}");
                     answerParent.SetActive(true);
                     answerParent.transform.DOScaleY(0, 0.5f).From();
-                    answerText.SetText(entityValue + $"\n{ responses[0].text}");
-                    _response.Value = entityValue + $"\n{ responses[0].text}";
+                    answerText.SetText(entityValue + $"\n{ responses["message"]}");
+                    _response.Value = entityValue + $"\n{ responses["message"]}";
+                    //gptanswerText.SetText($"\n{responses["message"]}");
+
+                    //gptanswerParent.DOScaleX(1, 0.4f).SetEase(Ease.InOutExpo)
+                    //        .OnComplete(() => { gptanswerText.DOText(request.downloadHandler.text, 2f); });
 
                 }
 
@@ -255,8 +262,8 @@ namespace _Project.Scripts.Experiment_1
         private IEnumerator GptWebRequest(string text)
         {
 
-            Req req = new Req("test", text,"gpt");
-            string uri = "http://192.168.0.174:8080/engine";
+            Req req = new Req(GameManager.instance.ToString(), text,"gpt", "cosmoDesc");
+            string uri = "https://europe-central2-devtorium-qna.cloudfunctions.net/aihub";
             var bodyJsonString = JsonUtility.ToJson(req);
             using (UnityWebRequest request = new UnityWebRequest(uri, "POST"))
             {

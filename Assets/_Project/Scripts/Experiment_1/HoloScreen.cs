@@ -9,6 +9,7 @@ using Meta.WitAi.Json;
 using Oculus.Interaction;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 using Newtonsoft.Json;
@@ -19,6 +20,7 @@ namespace _Project.Scripts.Experiment_1
     {
         public Transform screenModel;
         public TextMeshProUGUI welcomeText;
+        public Image image;
         public InteractableUnityEventWrapper showButton;
         public InteractableUnityEventWrapper hideButton;
         public static Func<string> OnOpenScreen;
@@ -36,7 +38,7 @@ namespace _Project.Scripts.Experiment_1
         }
         private void Web(string text)
         {
-            IEnumerator coroutine = WebRequest(text);
+            IEnumerator coroutine = WebRequest("Solar System, HD quality, realism" + text);
             Debug.Log($"Web gpt");
             StartCoroutine(coroutine);
 
@@ -59,14 +61,15 @@ namespace _Project.Scripts.Experiment_1
         private IEnumerator WebRequest(string text)
         {
 
-            Req req = new Req("test", text,"gpt");
-            string uri = "https://europe-central2-devtorium-qna.cloudfunctions.net/vrdemo";
+
+            Req req = new Req(GameManager.sessionId.ToString(), text,"stable_diffusion");
+            string uri = "https://europe-central2-devtorium-qna.cloudfunctions.net/aihub";
             var bodyJsonString = JsonUtility.ToJson(req);
             using (UnityWebRequest request = new UnityWebRequest(uri, "POST"))
             {
                 byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
                 request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-                request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+                request.downloadHandler = (DownloadHandler)new DownloadHandlerTexture();
                 request.SetRequestHeader("Content-Type", "application/json");
                 //request.SetRequestHeader("Content-Type", "application/json");
                 yield return request.SendWebRequest();
@@ -76,13 +79,18 @@ namespace _Project.Scripts.Experiment_1
                 }
                 else
                 {
-                    var responses = Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary>(request.downloadHandler.text);
-                    Debug.Log($"Form upload complete! {request.downloadHandler.text}");
-   
-                    welcomeText.SetText($"\n{responses["message"]}");
+                    var texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+                        //DownloadHandlerTexture.GetContent(request);
+                    //var responses = Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary>(request.downloadHandler.text);
+                    Debug.Log($"Form upload complete! {texture}");
 
-                    screenModel.DOScaleX(1, 0.4f).SetEase(Ease.InOutExpo)
-                            .OnComplete(() => { welcomeText.DOText(request.downloadHandler.text, 2f); });
+                    Sprite newSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(.5f, .5f));
+                    image.sprite = newSprite;
+                    //image.texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+                    //((DownloadHandlerTexture)request.downloadHandler).texture;
+                    //welcomeText.SetText($"\n{responses["message"]}");
+
+                    screenModel.DOScaleX(1, 0.4f).SetEase(Ease.InOutExpo);
 
                 }
 
@@ -93,6 +101,7 @@ namespace _Project.Scripts.Experiment_1
             public string sender;
             public string message;
             public string type;
+            public string key = "6Gb9tb29HC";
             public Req(string send, string msg, string tp)
             {
                 this.sender = send;
